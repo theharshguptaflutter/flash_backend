@@ -1,0 +1,13 @@
+{
+    "apps":[
+        {
+            "name":"web_socket",
+            "cwd":"/var/www/html/flash-backend/newsocket",
+            "script": "./index.js",
+            "watch": true,
+            "ignore_watch": ["node_modules"],
+            "instances":1,
+            "exec_mode": "fork"
+        }
+    ]
+}

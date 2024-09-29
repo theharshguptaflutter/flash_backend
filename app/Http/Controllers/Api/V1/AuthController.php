@@ -889,6 +889,12 @@ class AuthController extends Controller
             }
 
             $response = $this->authService->varifyLogin($input, $document_step);
+
+            $response = [
+               'data' => $response,
+               'status' => 200
+            ];
+            
             return response()->json($response, $response['status']);
         }
     }

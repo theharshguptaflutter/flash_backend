@@ -13,6 +13,8 @@ class VerifyCsrfToken extends Middleware
      */
     protected $except = [
         '/paygate/response',
-        '/notify'
+        '/notify',
+        'api/*', 
     ];
+  
 }

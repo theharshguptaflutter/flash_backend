@@ -6,6 +6,7 @@ use App\Services\Auth\DriverRegisterService;
 use App\Services\Auth\LoginService;
 use App\Services\Auth\VerifyOtpService;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 
 class AuthService
 {
@@ -31,6 +32,9 @@ class AuthService
      */
     public function varifyLogin(array $request, $document_step) 
     {
+        return $request;
+        Log::info($request);
+        
         return $this->loginService->login($request, $document_step);
     }
 
